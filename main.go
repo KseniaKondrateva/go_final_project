@@ -29,7 +29,7 @@ func main() {
 		}
 	})
 
-	http.HandleFunc("/api/tasks", TasksHandler(db))
+	http.HandleFunc("/api/tasks", tasks.TasksHandler(db))
 	http.HandleFunc("/api/task/done", tasks.DoneTaskHandler(db))
 
 	port := ":7540"
